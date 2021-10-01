@@ -85,7 +85,7 @@ $reviews = $prod->reviews;
                 <section class="ProductOverview">
                     <div class="ProductOverview__images">
                         <div class="ProductOverview__images--frame">
-                            <img src="<?php echo $proImage__big ?>" alt="">
+                            <img src="<?php echo $proImage__big ?>" alt="<?php echo $prod->title ?>">
                         </div>
                     </div>
                     <div class="ProductOverview__header">
@@ -185,7 +185,7 @@ $reviews = $prod->reviews;
         <button class="btn--close-modal">×</button>
         <div class="Modal__summary">
             <?php if($autherImage) {?>
-            <img src="<?php  echo $autherImage; ?>" alt="<?php echo $autherImage; ?>">
+            <img src="<?php  echo $autherImage; ?>" alt="<?php echo $autherName; ?>">
             <?php } ?>
         </div>
         <h2 class="Modal__header"><?php echo $autherName; ?></h2>
