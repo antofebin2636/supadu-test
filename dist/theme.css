@@ -551,7 +551,7 @@ footer {
   }
 }
 .ProTab__container .ProTab__btn--group .Btn.Btn--tab--active, .ProTab__container .ProTab__btn--group .Btn:hover {
-  background-color: cadetblue;
+  background-color: #5b5b5b;
   color: #ffffff;
 }
 
