@@ -1,0 +1,654 @@
+/* variables */
+/* ----------------------------------------------------------------------
+| Z-indexes
+|--------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+| Colours - Brand
+|--------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+| Colours - Mono
+|--------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+| Colours - UI
+|--------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+| Colours - Validation
+|--------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+| Colours - Structure
+|--------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+| Fonts
+|--------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+| Fonts - weights
+|--------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+| Breakpoints
+|--------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+| Transitions
+|--------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+| Shadows
+|--------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+| Components - Structure sizes
+|--------------------------------------------------------------------- */
+:root {
+  --header-large-banner: 20rem;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+button,
+input,
+textarea,
+select,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--color-text);
+  font-weight: var(--font-normal);
+  font-family: var(--font-primary);
+  line-height: 1.4;
+  background-color: var(--color-b);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  color: inherit;
+  background: transparent;
+  border: none;
+  appearance: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+select > option {
+  color: var(--color-black) !important;
+  background-color: var(--color-white) !important;
+}
+
+::selection {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+::-moz-selection {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.Disabled {
+  color: currentColor;
+  text-decoration: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+body {
+  font-size: 15px;
+  line-height: 24px;
+  overflow-x: hidden;
+  background-color: #e5e5e5;
+  font-family: "Poppins", sans-serif;
+}
+body.disable {
+  overflow: hidden;
+}
+body.stop {
+  overflow: hidden;
+}
+
+main {
+  overflow-x: hidden;
+}
+@media (min-width: 1200px) {
+  main {
+    overflow-x: unset;
+  }
+}
+
+.PageContainer {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100rem;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+}
+@media (min-width: 768px) {
+  .PageContainer {
+    padding-left: 2em;
+    padding-right: 2em;
+    max-width: 80rem;
+  }
+}
+
+.Section__columns {
+  display: grid;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+@media (min-width: 768px) {
+  .Section__columns {
+    grid-column-gap: 2em;
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+header,
+footer {
+  padding-top: 2rem;
+  display: block;
+}
+@media (min-width: 1200px) {
+  header,
+footer {
+    padding-top: 10rem;
+  }
+}
+
+.ProductOverview {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2rem 0;
+}
+@media (min-width: 1200px) {
+  .ProductOverview {
+    padding: 3em;
+  }
+}
+.ProductOverview .ProductOverview__images--frame {
+  position: relative;
+  display: block;
+}
+.ProductOverview .ProductOverview__images {
+  grid-column: 1/13;
+}
+@media (min-width: 1024px) {
+  .ProductOverview .ProductOverview__images {
+    grid-column: 1/5;
+  }
+}
+.ProductOverview .ProductOverview__header {
+  grid-column: 1/13;
+}
+@media (min-width: 1024px) {
+  .ProductOverview .ProductOverview__header {
+    grid-column: 6/13;
+  }
+}
+
+.Pro__container {
+  background-color: #ffffff;
+  padding: 2em;
+}
+
+.ProductOverview__header .ProductOverview__title {
+  display: block;
+  padding-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+@media (min-width: 768px) {
+  .ProductOverview__header .ProductOverview__title {
+    font-size: 35px;
+    line-height: 38px;
+    font-weight: 700;
+  }
+}
+.ProductOverview__header .ProductOverview__author {
+  color: #5b5b5b;
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s, color 0.2s;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+}
+.ProductOverview__header .ProductOverview__author:hover {
+  border-bottom: 1px solid cadetblue;
+  color: cadetblue;
+}
+
+.ProFormat {
+  margin-top: 20px;
+}
+.ProFormat > * + * {
+  margin-top: 20px;
+}
+.ProFormat .ProFormat__box {
+  background-color: #e5e5e5;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .ProFormat .ProFormat__box {
+    gap: unset;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.ProFormat .ProFormat__box .Format__title {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  display: block;
+  font-weight: 700;
+}
+
+.ProFormat__summary {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (min-width: 768px) {
+  .ProFormat__summary {
+    align-items: center;
+  }
+}
+.ProFormat__summary .Format__price {
+  font-size: 15px;
+  line-height: 24px;
+}
+.ProFormat__summary .Bt--cta {
+  background-color: #5b5b5b;
+  padding: 10px 22px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 14px;
+  transition: background-color 0.2s;
+  will-change: background-color;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .ProFormat__summary .Bt--cta {
+    padding: 14px 18px;
+  }
+}
+.ProFormat__summary .Bt--cta:hover {
+  background-color: cadetblue;
+}
+
+.ProductOverview__summary {
+  padding: 15px 0;
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.Retailer__box {
+  padding: 40px 0;
+}
+.Retailer__box .Title {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  display: block;
+  padding-bottom: 10px;
+}
+.Retailer__box .Reatiler__col {
+  display: flex;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .Retailer__box .Reatiler__col {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .Retailer__box .Reatiler__col {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1200px) {
+  .Retailer__box .Reatiler__col {
+    justify-content: space-between;
+  }
+}
+.Retailer__box .Reatiler__col .Retailer__cta {
+  display: block;
+  overflow: hidden;
+  width: 75px;
+}
+.Retailer__box .Reatiler__col .Retailer__cta.Retailer--inactive {
+  opacity: 0.5;
+}
+.Retailer__box .Reatiler__col .Retailer__cta img {
+  transition: opacity 0.2s;
+}
+.Retailer__box .Reatiler__col .Retailer__cta img.inactive {
+  opacity: 0.5;
+}
+
+@media (min-width: 1200px) {
+  .ProTab__container {
+    padding: 0 30px;
+  }
+}
+.ProTab__container .ProTab__content {
+  display: none;
+  padding: 2em 1em;
+  border: 1px solid #5b5b5b;
+}
+.ProTab__container .ProTab__content.ProTab__content--active {
+  display: block;
+}
+.ProTab__container .ProTab__content p {
+  font-size: 14px;
+  line-height: 24px;
+}
+.ProTab__container .ProTab__content p + p {
+  padding-top: 5px;
+}
+@media (min-width: 768px) {
+  .ProTab__container .ProTab__btn--group {
+    display: flex;
+    gap: 5px;
+  }
+}
+.ProTab__container .ProTab__btn--group .Btn {
+  background-color: #e5e5e5;
+  padding: 10px 30px;
+  font-size: 16px;
+  line-height: 32px;
+  border: 1px solid #5b5b5b;
+  border-bottom: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s, background-color 0.2s;
+  display: none;
+}
+@media (min-width: 768px) {
+  .ProTab__container .ProTab__btn--group .Btn {
+    display: block;
+  }
+}
+.ProTab__container .ProTab__btn--group .Btn.Btn--tab--active, .ProTab__container .ProTab__btn--group .Btn:hover {
+  background-color: cadetblue;
+  color: #ffffff;
+}
+
+.Review__box {
+  padding-bottom: 20px;
+}
+.Review__box .Review__title {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  color: #5b5b5b;
+  padding-left: 10px;
+}
+.Review__box .Review__desc {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.Sales__date {
+  font-family: "Playfair Display", serif;
+}
+.Sales__date .Date {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.Pro__select {
+  outline: 0;
+  padding: 0 2em 0 1em;
+  background: transparent url(img/dd.svg) no-repeat right;
+  color: #3b3c3f;
+  margin: 0;
+  height: 46px;
+  width: 100%;
+  border: 1px solid #5b5b5b;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .Pro__select {
+    display: none;
+  }
+}
+
+.Modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 94%;
+  max-width: 50em;
+  background-color: #e5e5e5;
+  padding: 3rem 2rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+.Modal .Modal__header {
+  font-family: "Playfair Display", serif;
+  text-align: left;
+  font-size: 24px;
+  line-height: 24px;
+  padding-top: 10px;
+  display: block;
+}
+.Modal .btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.Modal .Modal___desc {
+  padding: 10px 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}

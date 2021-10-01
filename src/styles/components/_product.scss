@@ -1,0 +1,245 @@
+.ProductOverview {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2rem 0;
+    @include bp(lg) {
+        padding: 3em;
+    }
+    .ProductOverview__images--frame {
+        position: relative;
+        display: block;
+    }
+    .ProductOverview__images {
+        grid-column: 1/13;
+        @include bp(midlg) {
+            grid-column: 1/5;
+        }
+    }
+    .ProductOverview__header {
+        grid-column: 1/13;
+        @include bp(midlg) {
+            grid-column: 6/13;
+        }
+    }
+}
+
+.Pro__container {
+    background-color: $color-white;
+    padding: 2em;
+}
+
+.ProductOverview__header {
+    .ProductOverview__title {
+        display: block;
+        padding-bottom: 20px;
+        font-family: $font-secondary;
+        @include Font__24-32;
+        @include bp(sm) {
+            @include Font__35-38;
+            font-weight: $font-bold;
+        }
+    }
+    .ProductOverview__author {
+        color: $color-cta;
+        display: inline-block;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.2s, color 0.2s;
+        font-family: $font-secondary;
+        font-weight: bold;
+        @include Font__16-16;
+        &:hover {
+            border-bottom: 1px solid $color-author;
+            color: $color-author;
+        }
+    }
+}
+
+.ProFormat {
+    margin-top: 20px;
+    &>*+* {
+        margin-top: 20px;
+    }
+    .ProFormat__box {
+        background-color: $color-secondary;
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        @include bp(sm) {
+            gap: unset;
+            align-items: center;
+            flex-direction: row;
+        }
+        .Format__title {
+            font-family: $font-secondary;
+            font-size: 20px;
+            display: block;
+            font-weight: $font-bold;
+        }
+    }
+}
+
+.ProFormat__summary {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include bp(sm) {
+        align-items: center;
+    }
+    .Format__price {
+        @include Font__15-24;
+    }
+    .Bt--cta {
+        background-color: $color-cta;
+        padding: 10px 22px;
+        color: $color-white;
+        @include Font__14-14;
+        transition: background-color 0.2s;
+        will-change: background-color;
+        font-weight: 500;
+        @include bp(sm) {
+            padding: 14px 18px;
+        }
+        &:hover {
+            background-color: $color-author;
+        }
+    }
+}
+
+.ProductOverview__summary {
+    padding: 15px 0;
+    display: block;
+    @include Font__14-24;
+}
+
+.Retailer__box {
+    padding: 40px 0;
+    .Title {
+        font-family: $font-secondary;
+        @include Font__30-36;
+        font-weight: $font-bold;
+        display: block;
+        padding-bottom: 10px;
+    }
+    .Reatiler__col {
+        display: flex;
+        padding-top: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        @include bp(sm) {
+            justify-content: space-between;
+        }
+        @include bp(midlg) {
+            justify-content: flex-start;
+        }
+        @include bp(lg) {
+            justify-content: space-between;
+        }
+        .Retailer__cta {
+            display: block;
+            overflow: hidden;
+            width: 75px;
+            &.Retailer--inactive {
+                opacity: 0.5;
+            }
+            img {
+                transition: opacity 0.2s;
+            }
+            img.inactive {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.ProTab__container {
+    @include bp(lg) {
+        padding: 0 30px;
+    }
+    .ProTab__content {
+        display: none;
+        padding: 2em 1em;
+        border: 1px solid $color-cta;
+        &.ProTab__content--active {
+            display: block;
+        }
+        p {
+            @include Font__14-24;
+        }
+        p+p {
+            padding-top: 5px;
+        }
+    }
+    .ProTab__btn--group {
+        @include bp(sm) {
+            display: flex;
+            gap: 5px;
+        }
+        .Btn {
+            background-color: $color-secondary;
+            padding: 10px 30px;
+            @include Font__16-32;
+            border: 1px solid $color-cta;
+            border-bottom: 0px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: color 0.2s, background-color 0.2s;
+            display: none;
+            @include bp(sm) {
+                display: block;
+            }
+            &.Btn--tab--active,
+            &:hover {
+                background-color: $color-author;
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.Review__box {
+    padding-bottom: 20px;
+    .Review__title {
+        display: block;
+        font-family: $font-secondary;
+        font-weight: 600;
+        color: $color-cta;
+        padding-left: 10px;
+    }
+    .Review__desc {
+        @include Font__16-32;
+        font-weight: 500;
+    }
+}
+
+.Sales__date {
+    font-family: $font-secondary;
+    .Date {
+        font-family: $font-primary;
+        @include Font__14-24;
+    }
+}
+
+.Pro__select {
+    @include bp(sm) {
+        display: none;
+    }
+    outline: 0;
+    padding: 0 2em 0 1em;
+    background: transparent url(img/dd.svg) no-repeat right;
+    color: #3b3c3f;
+    margin: 0;
+    height: 46px;
+    width: 100%;
+    border: 1px solid $color-cta;
+    margin-bottom: 10px;
+    @include Font__14-24;
+    font-weight: 500;
+}

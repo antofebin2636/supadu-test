@@ -1,0 +1,51 @@
+.Modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 94%;
+    max-width: 50em;
+    background-color: $color-secondary;
+    padding: 3rem 2rem;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.5s;
+    .Modal__header {
+        font-family: $font-secondary;
+        text-align: left;
+        @include Font__24-24;
+        padding-top: 10px;
+        display: block;
+    }
+    .btn--close-modal {
+        font-family: inherit;
+        color: inherit;
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        font-size: 3rem;
+        cursor: pointer;
+        border: none;
+        background: none;
+    }
+    .Modal___desc {
+        padding: 10px 0;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    transition: all 0.5s;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}

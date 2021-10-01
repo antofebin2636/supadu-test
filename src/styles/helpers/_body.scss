@@ -1,0 +1,63 @@
+body {
+    @include Font__15-24;
+    overflow-x: hidden;
+    background-color: $color-secondary;
+    font-family: $font-primary;
+    &.disable {
+        overflow: hidden;
+    }
+    &.stop {
+        overflow: hidden;
+    }
+}
+
+main {
+    overflow-x: hidden;
+    @include bp(lg) {
+        overflow-x: unset;
+    }
+}
+
+.PageContainer {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100rem;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    @include bp(sm) {
+        padding-left: 2em;
+        padding-right: 2em;
+        max-width: 80rem;
+    }
+}
+
+.Section__columns {
+    display: grid;
+    grid-row-gap: 1em;
+    grid-column-gap: 1em;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    @include bp(sm) {
+        grid-column-gap: 2em;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@mixin under-line {
+    content: "";
+    border-bottom: 1px solid;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+header,
+footer {
+    padding-top: 2rem;
+    display: block;
+    @include bp(lg) {
+        padding-top: 10rem;
+    }
+}

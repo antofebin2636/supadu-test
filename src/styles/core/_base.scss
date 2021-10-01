@@ -1,0 +1,79 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--color-text);
+    font-weight: var(--font-normal);
+    font-family: var(--font-primary);
+    line-height: 1.4;
+    background-color: var(--color-b);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+
+button {
+    color: inherit;
+    background: transparent;
+    border: none;
+    appearance: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+svg {
+    display: block;
+    fill: currentColor;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+select {
+    >option {
+        color: var(--color-black) !important;
+        background-color: var(--color-white) !important;
+    }
+}
+
+::selection {
+    color: var(--color-white);
+    background: var(--color-primary);
+}
+
+::-moz-selection {
+    color: var(--color-white);
+    background: var(--color-primary);
+}
+
+.Disabled {
+    color: currentColor;
+    text-decoration: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
